@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATV2-PROG 4</title>
+</head>
+<body>
+    <form action="atv2.html">
+        <fieldset>
+            <legend>Formulário de Cadastro</legend>
+            <fieldset>
+                <legend>Dados Pessoais</legend>   
+                <label for="username">Nome Completo</label><br>
+                <input type="text" name="username" size="55" maxlength="40"><br>
+                <label for="email">Email</label><br>
+                <input type="email" name="email">
+                <label for="data">Data de Nascimento</label>
+                <input type="date" name="data"><br>
+                <label for="cidade">Cidade</label><br>
+                <input type="text" name="cidade">
+                <label for="estado">Estado</label>
+                <select name="estado" id="estado">
+                    <option value="MT">MT</option>
+                    <option value="RJ">RJ</option>
+                    <option value="SP">SP</option>
+                </select>
+                <label for="sexo">Sexo:</label>
+                <input type="radio" name="genre" value="Masc" />Masc
+                <input type="radio" name="genre" value="Fem" />Fem
+                <fieldset>
+                    <legend>Informações acadêmicas</legend>
+                    <label for="RGA">RGA</label><br>
+                    <input type="text" name="RGA" required="required"><br><br>
+                    <label for="Disciplinas">Disciplinas do curso já realizadas(se aprovado)</label><br>
+                    <input type="checkbox" name="service" value="Estrutura de Dados I" />Estrutura de Dados I
+                    <input type="checkbox" name="service" value="Estrutura de Dados II" />Estrutura de Dados II
+                    <input type="checkbox" name="service" value="Programação 2" />Programação 2
+                    <input type="checkbox" name="service" value="Programação 2" />Programação 3<br><br>
+                    <label for="Horarios">Horários reservados para aulas síncronas:</label><br>
+                    <table border="1">
+                        <thead>
+                            <th></th>
+                            <th>Seg</th>
+                            <th>Ter</th>
+                            <th>Qua</th>
+                            <th>Qui</th>
+                            <th>Sex</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>07:30 às 9:30</td>
+                                <td><input type="checkbox" name="Horarios" value="seg1"></td>
+                                <td><input type="checkbox" name="Horarios" value="ter1"></td>
+                                <td><input type="checkbox" name="Horarios" value="qua1"></td>
+                                <td><input type="checkbox" name="Horarios" value="qui1"></td>
+                                <td><input type="checkbox" name="Horarios" value="sex1"></td>
+                            </tr>
+                            <tr>
+                                <td>09:30 às 11:30</td>
+                                <td><input type="checkbox" name="Horarios" value="seg2"></td>
+                                <td><input type="checkbox" name="Horarios" value="ter2"></td>
+                                <td><input type="checkbox" name="Horarios" value="qua2"></td>
+                                <td><input type="checkbox" name="Horarios" value="qui2"></td>
+                                <td><input type="checkbox" name="Horarios" value="sex2"></td>
+                            </tr>
+                            <tr>
+                                <td>13:30 às 15:30</td>
+                                <td><input type="checkbox" name="Horarios" value="seg3"></td>
+                                <td><input type="checkbox" name="Horarios" value="ter3"></td>
+                                <td><input type="checkbox" name="Horarios" value="qua3"></td>
+                                <td><input type="checkbox" name="Horarios" value="qui3"></td>
+                                <td><input type="checkbox" name="Horarios" value="sex3"></td>
+                            </tr>
+                            <tr>
+                                <td>15:30 às 17:30</td>
+                                <td><input type="checkbox" name="Horarios" value="seg4"></td>
+                                <td><input type="checkbox" name="Horarios" value="ter4"></td>
+                                <td><input type="checkbox" name="Horarios" value="qua4"></td>
+                                <td><input type="checkbox" name="Horarios" value="qui4"></td>
+                                <td><input type="checkbox" name="Horarios" value="sex4"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </fieldset>
+            </fieldset>
+        </fieldset>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </form>
+</body>
+</html>
