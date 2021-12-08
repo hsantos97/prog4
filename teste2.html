@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>A</td> <td>B</td><td>C</td><td rowspan="3">D</td>
+        </tr><tr>
+            <td>1</td><td colspan="2">2</td>
+        </tr>
+        <tr>
+            <td colspan="3">J</td>
+        </tr>
+    </table>
+
+    <form action="">
+        <p>Username:
+            <input type="text" name="username" size="15" maxlength="30">
+        </p>
+        <p>Password:
+            <input type="password" name="password" size="15" maxlength="30">
+        </p>
+        <p>Texto Grande:
+            <textarea name="comments" id="" cols="30" rows="10"></textarea>
+        </p>
+        <p>Select your favorite genre:
+            <br />
+            <input type="radio" name="genre" value="Rock" checked ="checked" />Rock
+            <input type="radio" name="genre" value="Pop" />Pop
+            <input type="radio" name="genre" value="Jazz" />Jazz
+        </p>
+        <p>select your favorite music service(s):
+            <br />
+            <input type="checkbox" name="service" value="itunes" checked ="checked" />Itunes
+            <input type="checkbox" name="service" value="Last.fm" />Last.fm
+            <input type="checkbox" name="service" value="Spotify" />Spotify
+        </p>
+        <p>What devices do you listen to music on?</p>
+        <select name="devices">
+            <option value="Ipod">Ipod</option>
+            <option value="Radio">Radio</option>
+            <option value="Computer">Computer</option>
+        </select>
+        <p>Upload your song in mp3 format:</p>
+        <input type="file" name="upload" value=""><br />
+        <input type="submit" name="" value="Upload">
+    </form>
+</body>
+</html>
