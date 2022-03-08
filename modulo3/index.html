@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Harison</title>
+  </head>
+  <style>
+    .box1 {
+        width: 250px;
+        height: 150px;
+        background-color: #ee3e80;
+        }
+    .box2 {
+        width: 250px;
+        height: 150px;
+        background-color: bisque;
+        }
+    .valor{
+        position: fixed;
+        bottom: 320px;
+    }
+  </style>
+  <body>
+    <div class="box1">    
+        <form id="myForm">
+          <legend>Itens</legend>
+          <select class="selecao-old">
+                <option id="OP1" value= 10>OP1 - $10</option>
+                <option id="OP2" value= 20>OP2 - $20</option>
+                <option id="OP3" value= 30>OP3 - $30</option>
+                <option id="OP4" value= 40>OP4 - $40</option>
+                <option id="OP5" value= 50>OP5 - $50</option>
+                <option id="OP6" value= 60>OP6 - $60</option>     
+            </select>
+            <input type="button" class="botao" onclick="soma();guardaLista();" value="Adicionar">
+        </form>       
+    </div>
+    <div class="box2">
+        <legend>Lista de itens</legend>
+        <ul class="lista">
+            
+        </ul>
+        <p class="valor">Total: </p>
+    </div>
+    <script src="listaProdutos.js"></script>
+  </body>
+</html>
