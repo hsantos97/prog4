@@ -6,13 +6,11 @@ let a = document.getElementById("myForm");
 
 var resultado = 0;
 
-a.on('submit' -> (e){
-     
+function soma(){
     resultado += selecao.value;  
-    console.log(resultado);
+    console.log(selecao[0]);
     
-    e.preventDefault();
-})
+}
 
 
 function guardaLista(){
@@ -44,4 +42,4 @@ function guardaLista(){
 botao.addEventListener('click', function(){
     soma();
     guardaLista();
-}, true)
+}, false)
