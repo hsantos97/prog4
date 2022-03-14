@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block movieList %}
+{% for mv in movies %}
+
+<div class="movie" data-name={{mv['title']}} data-type={{ mv['genres'] }} tabindex={{ mv['year'] }}>
+    <figure class="movie-figure">
+        <img src={{url_for('static', filename='img/' + mv['title'] +'.jpg')}} alt={{mv['title']}}>
+    </figure>
+    <section class="movie-description">
+        <span class="movie-id">#{{mv['year']}}</span>
+        <h1 class="movie-title">{{mv['title']}}</h1>
+        <div class="movie-genres">
+            {%for genres in mv['genres']%}
+            <span class="movie-genres background-{{genres}}">{{genres}}</span>
+            {%endfor%}
+        </div>
+    </section>
+    <section class="movie-cast">
+        {% for cast in mv['cast'] %}
+        <div class="stat-row">
+            {{cast}}
+        </div>
+        {% endfor %}
+    </section>
+</div>
+
+{% endfor %}
+{% endblock %}
