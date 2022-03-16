@@ -4,7 +4,8 @@
 
 <div class="pokemon" data-name={{ml['title']}} data-type={{ ml['genres'] }} tabindex={{ ml['year'] }}>
     <figure class="pokemon-figure">
-        <img src={{url_for('static', filename='img/' + ml['title']+'.jpg')}} alt={{ml['title']}}>
+        <img src={{url_for('static', filename='img/' + ml['title']+'.jpg')}} alt={{ml['title']}}
+            onerror="this.src='/static/img/notfound.png'" />
     </figure>
     <section class="pokemon-description">
         <span class="pokemon-id">#{{ml['year']}}</span>
