@@ -5,43 +5,117 @@
     <title>Harison</title>
   </head>
   <style>
+
+    #myList{
+      font-family: Arial, Helvetica, sans-serif;
+      font-size:12pt;
+      font-weight: 700;
+      padding:5px;
+      width:100%;
+    }
+
+    .botao{
+      padding:10px;
+      font-family: Arial, Helvetica, sans-serif;
+      color:#fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      background-color:rgb(14, 167, 121);
+      border:none;
+      border-radius:5px;
+      margin:10px 43px 13px 0px ;
+      box-shadow: 1px 3px 3px rgba(0,0,0,0.5);
+      width:40%;
+    }
+
+    .botao:hover{
+      background-color: rgb(23, 194, 143);
+      cursor: pointer;
+      transition: 0.4s;
+    }
+
+    .limpar{
+      padding:10px;
+      font-family: Arial, Helvetica, sans-serif;
+      color:#333;
+      background-color:rgb(255, 196, 0);
+      font-weight: bold;
+      text-transform: uppercase;
+      margin:0px 0px 20px 0px;
+      border:none;
+      border-radius:5px;
+      box-shadow: 1px 3px 3px rgba(0,0,0,0.5);
+      width:40%;
+    }
+    .limpar:hover{
+      background-color: rgb(251, 255, 0);
+      cursor: pointer;
+      transition: 0.4s; 
+    }
+    .container{
+      height: auto;
+      width:270px;
+      margin:100px auto 0px auto;
+      background:#fff;
+      box-shadow:1px 1px 3px rgba(0,0,0,0.5);
+      padding:15px;
+      border-radius:10px;
+    }
     .box1 {
         width: 250px;
-        height: 150px;
+        height: auto;
         background-color: #ee3e80;
+        padding:10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size:14pt;
+        color:#fff;
+        font-weight: 700;
+        line-height: 2;
+        border-radius:10px;
+        text-shadow: 1px 1px 1px #333;
         }
     .box2 {
         width: 250px;
-        height: 150px;
-        background-color: bisque;
+        max-height: auto;
+        padding:5px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size:14pt;
+        color:#333;
+        font-weight: 700;
+        border-radius:0px 0px 10px 10px;
+        margin-top:10px;
+        padding:10px 10px 30px 10px;
         }
     .valor{
-        position: fixed;
-        bottom: 320px;
+        position: relative;
+        bottom: 0;
     }
   </style>
-  <body>
+  <body style="background-color:#ddd">
+    <div class = "container">
     <div class="box1">    
         <form id="myForm">
           <legend>Itens</legend>
-          <select class="selecao">
-                <option value= 10>OP1 - $10</option>
-                <option value= 20>OP2 - $20</option>
-                <option value= 30>OP3 - $30</option>
-                <option value= 40>OP4 - $40</option>
-                <option value= 50>OP5 - $50</option>
-                <option value= 60>OP6 - $60</option>     
-            </select>
-            <input type="button" class="botao" onclick="soma();guardaLista();" value="Adicionar">
+          <select id="myList">
+                <option id="OP1" value= "10">Opção1 - R$10,00</option>
+                <option id="OP2" value= "20">Opção2 - R$20,00</option>
+                <option id="OP3" value= "30">Opção3 - R$30,00</option>
+                <option id="OP4" value= "40">Opção4 - R$40,00</option>
+                <option id="OP5" value= "50">Opção5 - R$50,00</option>
+                <option id="OP6" value= "60">Opção6 - R$60,00</option>     
+            </select><br>
+            <input type="button" class="botao" onclick="guardaLista();" value="Adicionar">
+            <input type="button" class="limpar" onclick="limparLista();" value="limpar">
         </form>       
     </div>
     <div class="box2">
         <legend>Lista de itens</legend>
-        <ul class="lista">
-            
+        <ul id="lista" style="list-style:none; padding:0; font-size:14pt; color:#0025ca; text-shadow: 1px 1px 1px rgba(0,0,0,0.2);">
         </ul>
-        <p class="valor">Total: </p>
+        <p class="valor "id="total"></p>
+        <div id ="somando">Total: R$0,00</div>
     </div>
+  </div>
     <script src="listaProdutos.js"></script>
   </body>
 </html>

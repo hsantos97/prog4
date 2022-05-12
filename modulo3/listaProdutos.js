@@ -1,45 +1,42 @@
-let botao = document.getElementsByClassName('botao');
-let lista = document.getElementsByClassName('lista');
-let total = document.getElementsByClassName('total');
-let selecao = document.getElementsByClassName('selecao');
-let a = document.getElementById("myForm");
-
-var resultado = 0;
-
-function soma(){
-    resultado += selecao.value;  
-    console.log(selecao[0]);
-    
-}
-
+botao = document.getElementsByClassName("botao")
+botao = document.getElementsByClassName("limpar")
+valor = 0;
 
 function guardaLista(){
-    //alert('AQUI')
-    var valor = selecao.value
+    var myList = document.getElementById("myList");
+    var selectedValue = myList.options[myList.selectedIndex].value;
+    valor = valor + parseInt(selectedValue, 10)
+    console.log(valor)
+
     var listaItens = document.createElement('li')
-    if(valor == 10){
-        listaItens.innerHTML = 'OP1'
+
+    if(selectedValue == 10){
+        listaItens.innerHTML = 'Opção1 ' + 'R$' + selectedValue + ',00'
     }
-    if(valor == 20){
-        listaItens.innerHTML = 'OP2'
+    if(selectedValue == 20){
+        listaItens.innerHTML = 'Opção2 ' + 'R$' + selectedValue + ',00'
     }
-    if(valor == 30){
-        listaItens.innerHTML = 'OP3'
+    if(selectedValue == 30){
+        listaItens.innerHTML = 'Opção3 ' + 'R$' + selectedValue + ',00'
     }
-    if(valor == 40){
-        listaItens.innerHTML = 'OP4'
+    if(selectedValue == 40){
+        listaItens.innerHTML = 'Opção4 ' + 'R$' + selectedValue + ',00'
     }
-    if(valor == 50){
-        listaItens.innerHTML = 'OP5'
+    if(selectedValue == 50){
+        listaItens.innerHTML = 'Opção5 ' + 'R$' + selectedValue + ',00'
     }
-    if(valor == 60){
-        listaItens.innerHTML = 'OP6'
+    if(selectedValue == 60){
+        listaItens.innerHTML = 'Opção6 ' + 'R$' + selectedValue + ',00'
     }
-    total.innerHTML = '$${resultado},00'
+    
     lista.appendChild(listaItens)
+    document.getElementById("somando").innerHTML = `Total: R$ ${valor},00`;
 }
 
-botao.addEventListener('click', function(){
-    soma();
-    guardaLista();
-}, false)
+function limparLista(){
+    document.getElementById("lista").innerHTML = ``;
+    document.getElementById("somando").innerHTML = `Total: R$0,00`;
+    if(onclick = 'click'){
+        valor = 0
+    }
+}

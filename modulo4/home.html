@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block movieList %}
+{% for ml in movies %}
+
+<div class="movie" data-name={{ml['title']}} data-type={{ ml['genres'] }} tabindex={{ ml['year'] }}>
+    <figure class="movie-figure">
+        <img src={{url_for('static', filename='img/' + ml['title']+'.jpg')}} alt={{ml['title']}}
+            onerror="this.src='/static/img/notfound.png'" />
+    </figure>
+    <section class="movie-description">
+        <span class="movie-id">#{{ml['year']}}</span>
+        <h1 class="movie-name">{{ml['title']}}</h1>
+        <div class="movie-types">
+            {%for type in ml['genres']%}
+            <span class="movie-type background-{{type}}">{{type}}</span>
+            {%endfor%}
+        </div>
+    </section>
+    <section class="movie-stats">
+        {% for cast in ml['cast'] %}
+        <div class="stat-row">
+            {{cast}}
+        </div>
+        {% endfor %}
+    </section>
+</div>
+
+{% endfor %}
+{% endblock %}

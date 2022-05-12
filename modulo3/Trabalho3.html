@@ -1,0 +1,92 @@
+<html>
+  <head>
+
+  </head>
+  <title>Harison</title>
+  <style>
+    body{
+      background-color: #edeff1;
+      margin: 0px;
+    }
+    .titulo{
+      background-color: white;
+      padding: 5px;
+      border-bottom: 5px solid black;
+      margin-top: 5px;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    #texto{
+      background-color: white;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+      margin: 5px;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-top: -15px;
+    }
+    .botao {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 5px;
+      margin: 5px;      
+  }
+  #busca{
+    margin: 5px;
+  }
+  .botao:hover{
+    background-color: red;
+    transition: 1s;
+  }
+  .botao:active{
+    background-color: blue;
+  }
+  #link{
+    margin: 5px;
+  }
+  </style>
+  <body>
+    <h1 class="titulo">CAPÍTULO 1 - UMA FESTA MUITO ESPERADA </h1>
+    <p id="texto">
+        Quando o Sr. Bilbo Bolseiro de Bolsão anunciou que em breve celebraria seu
+      onzentésimo primeiro aniversário com uma festa de especial grandeza, houve muito
+      comentário e agitação na Vila dos Hobbits.
+      Bilbo era muito rico e muito peculiar, e tinha sido a atração do Condado por
+      sessenta anos, desde seu notável desaparecimento e inesperado retorno. As riquezas
+      trazidas de suas viagens tinham agora se transformado numa lenda local, e popularmente
+      se acreditava que a Colina em Bolsão estava cheia de túneis recheados com tesouros.
+      E se isso não fosse o suficiente para se ter fama, havia também seu vigor
+      prolongado que maravilhava as pessoas.
+      O tempo passava, mas parecia ter pouco efeito sobre o Sr. Bolseiro. Aos noventa
+      anos, parecia ter cinqüenta. Aos noventa e nove, começaram a chamá-lo de bem-conservado; mas inalterado ficaria mais próximo da realidade.
+      Havia pessoas que balançavam a cabeça e pensavam que isso era bom demais;
+      parecia injusto que qualquer pessoa possuísse (aparentemente) a juventude perpétua,
+      além de (supostamente) uma riqueza inexaurível.
+      — Isso terá seu preço — diziam eles. — Não é natural e trará problemas.
+      Mas até agora os problemas não haviam chegado, e como o Sr. Bolseiro era
+      generoso com seu dinheiro, a maioria das pessoas estava disposta a perdoar suas
+      esquisitices e sua boa sorte. Continuou se relacionando em termos de cortesia com sua
+      família (com exceção, é claro, dos Sacola-bolseiros), e tinha muitos admiradores
+      devotados entre os hobbits de famílias pobres e sem importância. Mas não tinha amigos
+      íntimos, até que seus primos mais jovens começaram a crescer.
+      O mais velho deles, e favorito de Bilbo, era o jovem Frodo Bolseiro. 
+      </p>
+      <form action="">
+        <textarea name="text" id="busca" cols="30" rows="10"></textarea>
+        <div>
+          <input type="button" class="botao" id="button" value="Realçar" onclick="destacaTextoBusca(document.getElementById('busca').value, texto)">
+          <input type="button" class="botao" id="limpar" value="Limpar" onclick="limparTexto(document.getElementById('busca').value, texto)">
+          <div>
+            <a href="" id="link">COMPRAR</a>
+          </div>   
+        </div>        
+      </form>
+      <script src="trab3.js"></script>
+  </body>
+</html>
